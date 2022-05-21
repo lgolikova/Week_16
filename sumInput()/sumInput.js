@@ -1,6 +1,3 @@
-// let button = document.querySelector('button');
-// button.addEventListener("click", sumInput());
-
 function sumInput() {
     let list = [];
     while (true) {
@@ -12,13 +9,8 @@ function sumInput() {
     for (let num of list) {
         sum += num;
     }
-    return sum;
-    let sortedList = list.sort();
-    
-    
-    
+    list.sort((a,b)=>a-b);
+    console.log('Отсортированный массив: ' + list);     
+    return sum; 
 }
-
 console.log("Сумма = " + sumInput());
-console.log(sortedList);
-    // alert(sumInput());
