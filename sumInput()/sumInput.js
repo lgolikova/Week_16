@@ -2,16 +2,23 @@
 // button.addEventListener("click", sumInput());
 
 function sumInput() {
-
-    let numbers = [];
+    let list = [];
     while (true) {
-    let value = prompt("Введите число", 0);
+        let number = prompt("Введите число", '');
+        if (!isFinite(number) || number === "" || number === null) break;
+        list.push(+number);
+    }
+    let sum = 0;
+    for (let num of list) {
+        sum += num;
+    }
+    return sum;
+    let sortedList = list.sort();
     
-   
+    
+    
 }
-alert( sumInput() );
 
-
-
-
-}
+console.log("Сумма = " + sumInput());
+console.log(sortedList);
+    // alert(sumInput());

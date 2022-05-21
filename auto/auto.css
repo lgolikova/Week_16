@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .form {
     display: flex;
     flex-direction: column;
+    padding: 50px;
+    background-color: rgb(217, 237, 248);
 }
 
 .container {
@@ -16,9 +19,19 @@
 
 .inner-container {
     margin: auto;
+    border: 3px solid lightblue;
+    /* padding: 60px; */
 }
 
 .options {
     display: flex;
     flex-direction: column;
+}
+
+.heading {
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    height: 20px;
+    
 }

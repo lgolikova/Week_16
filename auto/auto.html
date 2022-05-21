@@ -12,24 +12,25 @@
 <body>
     <div class="container">
         <div class="inner-container">
-            <div class="form">
-                <div class="heading">Калькулятор стоимости авто</div>
+            <div class="heading">Калькулятор стоимости авто</div>
+            <form class="form">
+
                 <div>
                     <p>Марка</p>
-                    <select class="brand">
-                        <option value="skoda">Skoda</option>
-                        <option value="audi">Audi</option>
-                        <option value="bmw">BMW</option>
-                        <option value="renault">Renault</option>
-                        <option value="nissan">Nissan</option>
+                    <select id="brand">
+                        <option value="700000">Skoda</option>
+                        <option value="800000">Audi</option>
+                        <option value="1000000">BMW</option>
+                        <option value="600000">Renault</option>
+                        <option value="900000">Nissan</option>
                     </select>
                 </div>
                 <div>
                     <p>Возраст автомобиля:</p>
-                    <p><input type="radio" name="age" value="class_0">Меньше 3 лет</p>
-                    <p><input type="radio" name="age" value="class_1">От 3 до 5 лет</p>
-                    <p><input type="radio" name="age" value="class_2">от 5 до 7 лет</p>
-                    <p><input type="radio" name="age" value="class_3">Больше 7 лет</p>
+                    <p><input type="radio" name="age" value="class_0" class="year">Меньше 3 лет</p>
+                    <p><input type="radio" name="age" value="class_1" class="year">От 3 до 5 лет</p>
+                    <p><input type="radio" name="age" value="class_2" class="year">от 5 до 7 лет</p>
+                    <p><input type="radio" name="age" value="class_3" class="year">Больше 7 лет</p>
                 </div>
                 <div>
                     <p> Цена на аукционе, $</p>
@@ -37,36 +38,37 @@
                 </div>
                 <div>
                     <p>Уровень оснащения:</p>
-                    <select class="level">
-                        <option value="skoda">Базовый</option>
-                        <option value="audi">Средний</option>
-                        <option value="bmw">Максимальный</option>
+                    <select>
+                        <option value="skoda" class="level">Базовый</option>
+                        <option value="audi" class="level">Средний</option>
+                        <option value="bmw" class="level">Максимальный</option>
                     </select>
                 </div>
 
-                <div class="options">
+                <div>
                     <p>Дополнительно:</p>
                     <label>Кондиционер
-                        <input type="checkbox">
+                        <input type="checkbox" class="options">
                     </label>
                     <label>Парктроник
-                        <input type="checkbox">
+                        <input type="checkbox" class="options">
                     </label>
                     <label>Чехлы
-                        <input type="checkbox">
+                        <input type="checkbox" class="options">
                     </label>
                 </div>
+                <button class="btn">Рассчитать</button>
 
 
 
-            </div>
+            </form>
 
 
 
         </div>
     </div>
     </div>
-
+    <script src="./auto.js"></script>
 </body>
 
 </html>
