@@ -15,7 +15,7 @@
             <div class="heading">Калькулятор стоимости авто</div>
             <form class="form">
 
-                <div>
+                <div class="brand-container">
                     <p>Марка</p>
                     <select id="brand">
                         <option value="Skoda" class="brand">Skoda</option>
@@ -25,7 +25,7 @@
                         <option value="Nissan" class="brand">Nissan</option>
                     </select>
                 </div>
-                <div>
+                <div class="age-container">
                     <p>Возраст автомобиля:</p>
                     <p><input type="radio" name="age" value="class_0" class="year" checked>Меньше 3 лет</p>
                     <p><input type="radio" name="age" value="class_1" class="year">От 3 до 5 лет</p>
@@ -36,8 +36,8 @@
                     <p> Цена на аукционе, $</p>
                     <input type="number" class="price" value="">
                 </div> -->
-                <div>
-                    <p>Уровень оснащения:</p>
+                <div class="level-container">
+                    <p class="level-heading">Уровень оснащения:</p>
                     <select class="level">
                         <option value="basic">Базовый</option>
                         <option value="middle">Средний</option>
@@ -45,17 +45,20 @@
                     </select>
                 </div>
 
-                <div>
+                <div class="checkbox-container">
                     <p>Дополнительно:</p>
-                    <label>Кондиционер
+                    <div class="checkbox-group">
+                        <label>Кондиционер</label>
                         <input type="checkbox" class="options">
-                    </label>
-                    <label>Парктроник
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Парктроник</label>
                         <input type="checkbox" class="options">
-                    </label>
-                    <label>Чехлы
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Чехлы</label>
                         <input type="checkbox" class="options">
-                    </label>
+                    </div>
                 </div>
                 <button class="btn">Рассчитать</button>
 

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .form {
     display: flex;
@@ -23,10 +23,10 @@
     /* padding: 60px; */
 }
 
-.options {
+/* .options {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .heading {
     background-color: lightblue;
@@ -35,3 +35,55 @@
     height: 20px;
     
 }
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+button {
+    margin: 10px 0 10px 0;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(209, 165, 43);
+    background-color: rgb(230, 220, 38);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.brand-container, .age-container, .level-container {
+    margin-bottom: 10px;
+}
+
+div .checkbox-group {
+    margin-bottom: 5px;
+}
+
+.checkbox-container p, .brand-container p, .level-container p {
+    margin-bottom: 5px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.age-container p:nth-child(2), .age-container p:nth-child(3), .age-container p:nth-child(4), .age-container p:nth-child(5) {
+    font-weight:  normal;
+}
+
+/* .age-container p:not(first-child) {
+    font-weight: normal;
+}
+
+.level-heading {
+    font-weight: bold !important;
+} */
