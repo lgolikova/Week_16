@@ -12,25 +12,26 @@
 <body>
     <div class="container">
         <div class="inner-container">
-            <div class="heading">Калькулятор стоимости авто</div>
+            <div class="heading">Калькулятор стоимости автомобиля</div>
             <form class="form">
 
                 <div class="brand-container">
                     <p>Марка</p>
-                    <select id="brand">
-                        <option value="Skoda" class="brand">Skoda</option>
-                        <option value="Audi" class="brand">Audi</option>
-                        <option value="BMW" class="brand">BMW</option>
-                        <option value="Renault" class="brand">Renault</option>
-                        <option value="Nissan" class="brand">Nissan</option>
+                    <select id="brand" class="brand">
+                        <option value="car" selected>Выберите марку</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Nissan">Nissan</option>
                     </select>
                 </div>
                 <div class="age-container">
                     <p>Возраст автомобиля:</p>
-                    <p><input type="radio" name="age" value="class_0" class="year" checked>Меньше 3 лет</p>
-                    <p><input type="radio" name="age" value="class_1" class="year">От 3 до 5 лет</p>
-                    <p><input type="radio" name="age" value="class_2" class="year">От 5 до 7 лет</p>
-                    <p><input type="radio" name="age" value="class_3" class="year">Больше 7 лет</p>
+                    <p><input type="radio" name="age" value="150000" class="year" checked>Меньше 3 лет</p>
+                    <p><input type="radio" name="age" value="120000" class="year">От 3 до 5 лет</p>
+                    <p><input type="radio" name="age" value="100000" class="year">От 5 до 7 лет</p>
+                    <p><input type="radio" name="age" value="70000" class="year">Больше 7 лет</p>
                 </div>
                 <!-- <div>
                     <p> Цена на аукционе, $</p>
@@ -49,24 +50,21 @@
                     <p>Дополнительно:</p>
                     <div class="checkbox-group">
                         <label>Кондиционер</label>
-                        <input type="checkbox" class="options">
+                        <input type="checkbox" class="options" value="100000">
                     </div>
                     <div class="checkbox-group">
                         <label>Парктроник</label>
-                        <input type="checkbox" class="options">
+                        <input type="checkbox" class="options" value="120000">
                     </div>
                     <div class="checkbox-group">
                         <label>Чехлы</label>
-                        <input type="checkbox" class="options">
+                        <input type="checkbox" class="options" value="80000">
                     </div>
                 </div>
-                <button class="btn">Рассчитать</button>
-
-
+                <button id="btn">Рассчитать</button>
+                <div id="result"></div>
 
             </form>
-
-
 
         </div>
     </div>

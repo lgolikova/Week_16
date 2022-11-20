@@ -86,11 +86,3 @@ select {
 .age-container p:nth-child(2), .age-container p:nth-child(3), .age-container p:nth-child(4), .age-container p:nth-child(5) {
     font-weight:  normal;
 }
-
-/* .age-container p:not(first-child) {
-    font-weight: normal;
-}
-
-.level-heading {
-    font-weight: bold !important;
-} */

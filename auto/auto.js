@@ -1,101 +1,82 @@
 // ЗАДАНИЕ ЕЩЕ НЕ СДЕЛАНО
-let list = []
-const brand = document.getElementById('brand');
+const list = []
+// const brand = document.getElementById('brand');
 const level = document.querySelector('.level');
-const age = document.querySelectorAll('.year').value;
-// console.log(age);
+const age = document.getElementsByClassName('year');
+const result = document.querySelector('#result');
+const brand = document.querySelector('.brand');
+const btn = document.getElementById('btn');
+const options = document.getElementsByClassName('options');
 
-brand.addEventListener('change', (e) => {
+
+brand.addEventListener('change', () => {
     switch (brand.value) {
         case "Skoda":
-            list[0] = 600000;
+            // list[0] = 600000;
+            list.push(600000);
             break;
         case "Audi":
-            list[0] = 700000;
+            list.push(700000);
+            // list[0] = 700000;
             break;
         case "BMW":
-            list[0] = 1000000;
+            list.push(1000000);
+            // list[0] = 1000000;
             break;  
         case "Renault":
-            list[0] = 500000;
+            list.push(500000);
+            // list[0] = 500000;
             break;  
         case "Nissan":
-            list[0] = 800000;
+            list.push(800000);
+            // list[0] = 800000;
             break;
     }
 })
 
-level.addEventListener('change', (e) => {
+for (let i=0; i<age.length; i++) { 
+    age[i].addEventListener('change', () => {
+        if (age[i].checked) {
+            list.push(+age[i].value);
+        }
+    })
+}
+
+level.addEventListener('change', () => {
     switch (level.value) {
         case "basic":
-            list[1] = 100000;
+            list.push(100000);
             break;
         case "middle":
-            list[1] = 150000;
+            list.push(150000);
             break;
         case "maxi":
-            list[1] = 250000;
+            list.push(250000);
             break;  
     }
 })
 
 
-
-
-
-
-// })
-// age.addEventListener('click', () => {
-// for (let i=0; i<age.length; i++) {
-//     if (age[i].checked) {
-//         list[2]=age[i].value;
-//         break;
+// options.forEach((item) => {
+//     if (item.checked) {
+//         list.push(+item.value);
 //     }
-// }
 // })
 
 
 
+console.log(list)
+console.log(options)
+
+btn.addEventListener('click', () => {
+    let sum = 0;
+    list.forEach((item) => {
+        sum += item;
+        })
+    alert("Стоимость автомобиля: " + sum)
+    })
 
 
 
-console.log(list);
 
 
-// selects.forEach((item, index) => {
-// item.addEventListener('change', (e) => {
-//     switch (item.value) {
-//         case "Skoda":
-//             list[0] = 600000;
-//             break;
-//         case "Audi":
-//             list[0] = 700000;
-//             break;
-//         case "BMW":
-//             list[0] = 1000000;
-//             break;  
-//         case "Renault":
-//             list[0] = 500000;
-//             break;  
-//         case "Nissan":
-//             list[0] = 800000;
-//             break;
-//         case "basic":
-//             list[1] = 100000;
-//         case "middle":
-//             list[1] = 200000; 
-//         case "maxi":
-//             list[1] = 300000;                             
-//     }
-    
-// })
-// })
-// console.log(list);
-
-
-
-// const year = document.querySelector('.year');
-// const price = document.querySelector('.price');
-// 
-// const options = document.querySelectorAll('.options');
-// const btn = document.querySelector('.btn');
