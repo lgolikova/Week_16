@@ -78,7 +78,7 @@ btn.addEventListener('click', () => {
             list.push(+item.value);
         }
     })
-
+    console.log(list)
     list.forEach((item) => {
         sum += item;
         })
