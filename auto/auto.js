@@ -1,12 +1,10 @@
-// ЗАДАНИЕ ЕЩЕ НЕ СДЕЛАНО
 const list = []
-// const brand = document.getElementById('brand');
 const level = document.querySelector('.level');
 const age = document.getElementsByClassName('year');
 const result = document.querySelector('#result');
 const brand = document.querySelector('.brand');
 const btn = document.getElementById('btn');
-const options = document.getElementsByClassName('options');
+const options = document.querySelectorAll('.options');
 
 
 brand.addEventListener('change', () => {
@@ -56,25 +54,36 @@ level.addEventListener('change', () => {
     }
 })
 
-
 // options.forEach((item) => {
 //     if (item.checked) {
 //         list.push(+item.value);
 //     }
 // })
 
-
+// for (let i=0; i<options.length; i++) { 
+//     if (options[i].checked) {
+//         list.push(+options[i].value);
+//         }
+//     }
 
 console.log(list)
 console.log(options)
 
 btn.addEventListener('click', () => {
     let sum = 0;
+
+    options.forEach((item) => {
+        console.log(item.checked);
+        if (item.checked) {
+            list.push(+item.value);
+        }
+    })
+
     list.forEach((item) => {
         sum += item;
         })
     alert("Стоимость автомобиля: " + sum)
-    })
+})
 
 
 
